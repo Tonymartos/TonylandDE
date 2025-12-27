@@ -34,7 +34,7 @@ git clone --depth 1 https://github.com/Tonymartos/TonylandDE ~/TonylandDE
 cd ~/TonylandDE/Scripts
 ./install.sh
 ```
-
+<br>
 <a id="updating"></a>
 <div align="center">
 <img src="https://readme-typing-svg.herokuapp.com?font=Righteous&size=30&duration=4000&pause=1000&color=8EB0E6&center=true&vCenter=true&width=500&height=40&lines=🔄+KEEPING+UP+TO+DATE" alt="Updating"/>
