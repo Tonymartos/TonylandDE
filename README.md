@@ -48,8 +48,3 @@ git pull origin master
 ```
 
 > TonylandDE includes custom themes and supports all official HyDE themes.
-
-Official HyDE themes can be installed using themepatcher from [HyDE-Project/hyde-themes](https://github.com/HyDE-Project/hyde-themes).
-
-<div align="center">
-  <table><tr><td>
