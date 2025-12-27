@@ -12,13 +12,10 @@
 
 <br>
 
+> [!NOTE]
 > 🎨 TonylandDE is a customized template based on [HyDE (Hyprland Desktop Environment)](https://github.com/HyDE-Project/HyDE).
 >
 > 📖 We recommend visiting the original HyDE repository first to understand the base system before using this template.
-
-<br>
-
-<div align="center">
 
 <br>
 
