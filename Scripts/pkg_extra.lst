@@ -73,5 +73,7 @@ pixieditor-bin                                          # pixel art editor
 wezterm                                                 # GPU-accelerated terminal emulator
 kdenlive                                                # video editor
 qbittorrent                                             # bittorrent client
-heroic-games-launcher-bin                               # epic games launcher
+heroic-games-launcher-bin                               # epic games amazon and gog launcher
 kdeconnect                                              # integrate your devices
+teams-for-linux-bin                                     # chats for enterprises works
+
