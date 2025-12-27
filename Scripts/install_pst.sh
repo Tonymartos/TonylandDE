@@ -35,9 +35,14 @@ if pkg_installed sddm; then
             sudo touch /etc/sddm.conf.d/the_hyde_project.conf
             sudo cp /etc/sddm.conf.d/the_hyde_project.conf /etc/sddm.conf.d/backup_the_hyde_project.conf
             sudo cp /usr/share/sddm/themes/${sddmtheme}/the_hyde_project.conf /etc/sddm.conf.d/
+            
+            # Configure autologin
+            echo -e "\n[Autologin]" | sudo tee -a /etc/sddm.conf.d/the_hyde_project.conf > /dev/null
+            echo "User=${USER}" | sudo tee -a /etc/sddm.conf.d/the_hyde_project.conf > /dev/null
+            echo "Session=hyprland" | sudo tee -a /etc/sddm.conf.d/the_hyde_project.conf > /dev/null
         fi
 
-        print_log -g "[DISPLAYMANAGER] " -b " :: " "sddm configured with ${sddmtheme} theme..."
+        print_log -g "[DISPLAYMANAGER] " -b " :: " "sddm configured with ${sddmtheme} theme and autologin enabled..."
     else
         print_log -y "[DISPLAYMANAGER] " -b " :: " "sddm is already configured..."
     fi
