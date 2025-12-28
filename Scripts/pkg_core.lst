@@ -102,6 +102,7 @@ kdeconnect                                              # integrate your devicem
 teams-for-linux-bin                                     # chats for enterprises works
 sourcegit                                               # Git GUI Management
 vesktop                                                 # Discord custom electron for linux
+opencode                                                # The AI coding agent built for the terminal.
 
 # --------------------------------------------------- // Optional TonylandDE Custom Apps
 #pixieditor                                            # All-in-one solution for 2D image editing
