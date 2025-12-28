@@ -74,6 +74,9 @@ vim                                                    # terminal text editor
 visual-studio-code-bin                                 # ide text editor
 nwg-displays                                           # monitor management utility
 fzf                                                    # Command-line fuzzy finder
+lazygit                                                # Git GUI terminal
+lazydocker                                             # Docker Management GUI terminal
+lazynpm                                                # NPM Management GUI terminal
 
 # --------------------------------------------------- // Shell
 starship|zsh                                           # customizable shell prompt written in Rust
@@ -82,5 +85,22 @@ starship|fish                                          # customizable shell prom
 
 fastfetch                                              # system information fetch tool
 
-# --------------------------------------------------- // HyDE
+# --------------------------------------------------- // TonylandDE
 hypridle                                               # idle daemon
+
+# --------------------------------------------------- // TonylandDE Custom Apps
+beekeeper-studio-bin                                    # SQL editor and database manager
+bitwarden                                               # password manager
+blender                                                 # 3D creation suite
+feishin-bin                                             # music player for subsonic-compatible servers
+obs-studio                                              # video recording and live streaming
+kdenlive                                                # video editor
+qbittorrent                                             # bittorrent client
+heroic-games-launcher-bin                               # epic games amazon and gog launcher
+kdeconnect                                              # integrate your devicemages
+teams-for-linux-bin                                     # chats for enterprises works
+sourcegit                                               # Git GUI Management
+
+
+# --------------------------------------------------- // Optional TonylandDE Custom Apps
+#pixieditor                                            # All-in-one solution for 2D image editing

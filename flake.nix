@@ -1,5 +1,5 @@
 {
-  description = "HyDE - HyprDots Environment";
+  description = "TonylandDE - Tony's Hyprland Desktop Environment";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";

@@ -10,7 +10,7 @@ source "${scrDir}/global_fn.sh"
 THEME_NAME="Arc Blueberry"
 THEME_ARCHIVE="${scrDir}/../Source/arcs/Theme_Arc-Blueberry.tar.gz"
 confDir="${XDG_CONFIG_HOME:-$HOME/.config}"
-THEME_DIR="${confDir}/hyde/themes/${THEME_NAME}"
+THEME_DIR="${confDir}/tonylandde/themes/${THEME_NAME}"
 
 print_log -g "[THEME] " -b "Installing :: " "${THEME_NAME}"
 
@@ -29,7 +29,15 @@ if [ -f "${THEME_ARCHIVE}" ]; then
     echo "13" > "${THEME_DIR}/.sort"
     
     print_log -g "[THEME] " -stat "installed" "${THEME_NAME}"
-    print_log -y "[THEME] " -b "To apply: " "hyde theme select"
+    
+    # Apply the theme automatically if hyde-shell is available
+    if command -v hyde-shell &> /dev/null; then
+        print_log -g "[THEME] " -b "Applying :: " "${THEME_NAME}"
+        "${HOME}/.local/lib/hyde/theme.switch.sh" -s "${THEME_NAME}" 2>/dev/null || true
+        print_log -g "[THEME] " -stat "applied" "${THEME_NAME}"
+    else
+        print_log -y "[THEME] " -b "To apply: " "tonylandde theme select"
+    fi
 else
     print_log -r "[THEME] " -err "not found" "${THEME_ARCHIVE}"
     exit 1
