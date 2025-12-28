@@ -18,7 +18,6 @@ brightnessctl                                          # screen brightness contr
 playerctl                                              # media controls
 udiskie                                                # manage removable media
 plymouth                                               # boot splash screen
-plymouth-theme-hud-git                                 # HUD theme for plymouth
 
 # --------------------------------------------------- // Display Manager
 sddm                                                   # display manager for KDE plasma
