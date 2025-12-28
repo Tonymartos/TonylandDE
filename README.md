@@ -13,9 +13,9 @@
 <br>
 
 > [!NOTE]
-> 🎨 TonylandDE is a customized template based on [HyDE (Hyprland Desktop Environment)](https://github.com/HyDE-Project/HyDE).
+> 🎨 TonylandDE is my customized configuration template based on [HyDE (Hyprland Desktop Environment)](https://github.com/HyDE-Project/HyDE).
 >
-> 📖 We recommend visiting the original HyDE repository first to understand the base system before using this template.
+> 📖 I recommend visiting the original HyDE repository first to understand the base system before using this template.
 
 <br>
 
@@ -58,3 +58,25 @@ git pull origin master
 > TonylandDE includes exclusive custom themes like **Arc Blueberry** and supports all official HyDE themes.
 >
 > Official HyDE themes can be installed using themepatcher from [HyDE-Project/hyde-themes](https://github.com/HyDE-Project/hyde-themes).
+
+<br>
+
+<a id="whats-new"></a>
+<div align="center">
+<img src="https://readme-typing-svg.herokuapp.com?font=Righteous&size=30&duration=4000&pause=1000&color=A855F7&center=true&vCenter=true&width=500&height=40&lines=✨+WHAT'S+NEW+IN+TONYLANDDE" alt="What's New"/>
+</div>
+
+---
+
+<div align="center">
+
+| Feature | 
+|:--------|
+| 🎨 **Arc Blueberry Theme** | 
+| 🚀 **Plymouth Boot Splash** | 
+| 🔐 **Plymouth LUKS Support** |
+| 🎭 **HUD Boot Theme** | 
+
+</div>
+
+<br>

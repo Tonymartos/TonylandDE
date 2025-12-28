@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-HYDE_CLONE_PATH=$(git rev-parse --show-toplevel)
-HYDE_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-HYDE_REMOTE=$(git config --get remote.origin.url)
-HYDE_VERSION=$(git describe --tags --always)
-HYDE_COMMIT_HASH=$(git rev-parse HEAD)
-HYDE_VERSION_COMMIT_MSG=$(git log -1 --pretty=%B)
-HYDE_VERSION_LAST_CHECKED=$(date +%Y-%m-%d\ %H:%M%S\ %z)
+TONYLANDDE_CLONE_PATH=$(git rev-parse --show-toplevel)
+TONYLANDDE_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+TONYLANDDE_REMOTE=$(git config --get remote.origin.url)
+TONYLANDDE_VERSION=$(git describe --tags --always)
+TONYLANDDE_COMMIT_HASH=$(git rev-parse HEAD)
+TONYLANDDE_VERSION_COMMIT_MSG=$(git log -1 --pretty=%B)
+TONYLANDDE_VERSION_LAST_CHECKED=$(date +%Y-%m-%d\ %H:%M%S\ %z)
 
 generate_release_notes() {
   local latest_tag
@@ -31,33 +31,33 @@ generate_release_notes() {
   echo "$commits"
 }
 
-# HYDE_RELEASE_NOTES=$(generate_release_notes)
+# TONYLANDDE_RELEASE_NOTES=$(generate_release_notes)
 
-echo "HyDE $HYDE_VERSION built from branch $HYDE_BRANCH at commit ${HYDE_COMMIT_HASH:0:12} ($HYDE_VERSION_COMMIT_MSG)"
-echo "Date: $HYDE_VERSION_LAST_CHECKED"
-echo "Repository: $HYDE_CLONE_PATH"
-echo "Remote: $HYDE_REMOTE"
+echo "TonylandDE $TONYLANDDE_VERSION built from branch $TONYLANDDE_BRANCH at commit ${TONYLANDDE_COMMIT_HASH:0:12} ($TONYLANDDE_VERSION_COMMIT_MSG)"
+echo "Date: $TONYLANDDE_VERSION_LAST_CHECKED"
+echo "Repository: $TONYLANDDE_CLONE_PATH"
+echo "Remote: $TONYLANDDE_REMOTE"
 echo ""
 
 if [[ "$1" == "--cache" ]]; then
-  state_dir="${XDG_STATE_HOME:-$HOME/.local/state}/hyde"
+  state_dir="${XDG_STATE_HOME:-$HOME/.local/state}/tonylandde"
   mkdir -p "$state_dir"
   version_file="$state_dir/version"
 
   cat >"$version_file" <<EOL
-HYDE_CLONE_PATH='$HYDE_CLONE_PATH'
-HYDE_BRANCH='$HYDE_BRANCH'
-HYDE_REMOTE='$HYDE_REMOTE'
-HYDE_VERSION='$HYDE_VERSION'
-HYDE_VERSION_LAST_CHECKED='$HYDE_VERSION_LAST_CHECKED'
-HYDE_VERSION_COMMIT_MSG='$HYDE_VERSION_COMMIT_MSG'
-HYDE_COMMIT_HASH='$HYDE_COMMIT_HASH'
+TONYLANDDE_CLONE_PATH='$TONYLANDDE_CLONE_PATH'
+TONYLANDDE_BRANCH='$TONYLANDDE_BRANCH'
+TONYLANDDE_REMOTE='$TONYLANDDE_REMOTE'
+TONYLANDDE_VERSION='$TONYLANDDE_VERSION'
+TONYLANDDE_VERSION_LAST_CHECKED='$TONYLANDDE_VERSION_LAST_CHECKED'
+TONYLANDDE_VERSION_COMMIT_MSG='$TONYLANDDE_VERSION_COMMIT_MSG'
+TONYLANDDE_COMMIT_HASH='$TONYLANDDE_COMMIT_HASH'
 EOL
-# HYDE_RELEASE_NOTES='$HYDE_RELEASE_NOTES'
+# TONYLANDDE_RELEASE_NOTES='$TONYLANDDE_RELEASE_NOTES'
 
   echo -e "Version cache output to $version_file\n"
 
 elif [[ "$1" == "--release-notes" ]]; then
-  echo "$HYDE_RELEASE_NOTES"
+  echo "$TONYLANDDE_RELEASE_NOTES"
 
 fi

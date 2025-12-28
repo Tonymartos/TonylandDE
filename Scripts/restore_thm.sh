@@ -23,7 +23,7 @@ if [ "$flg_ThemeInstall" -eq 1 ]; then
     while IFS='"' read -r _ themeName _ themeRepo; do
         themeNameQ+=("${themeName//\"/}")
         themeRepoQ+=("${themeRepo//\"/}")
-        themePath="${confDir}/hyde/themes/${themeName}"
+        themePath="${confDir}/tonylandde/themes/${themeName}"
         [ -d "${themePath}" ] || mkdir -p "${themePath}"
         [ -f "${themePath}/.sort" ] || echo "${#themeNameQ[@]}" >"${themePath}/.sort"
 
@@ -44,5 +44,12 @@ if [ "$flg_ThemeInstall" -eq 1 ]; then
         parallel --bar --link "\"${scrDir}/themepatcher.sh\"" "{1}" "{2}" "{3}" "{4}" ::: "${themeNameQ[@]}" ::: "${themeRepoQ[@]}" ::: "--skipcaching" ::: "false"
         set -e
     fi
+    
+    # Install Arc Blueberry theme from local archive
+    if [ -f "${scrDir}/install_arc_blueberry.sh" ]; then
+        print_log -g "[THEME] " -b "Installing :: " "Arc Blueberry (local theme)"
+        "${scrDir}/install_arc_blueberry.sh"
+    fi
+    
     print_log -y "Be sure to cache the wallpapers!"
 fi

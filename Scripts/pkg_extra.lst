@@ -62,18 +62,3 @@ duf|fish                                                 # prettier version of d
 # --------------------------------------------------- // OSD
 swayosd-git                                             #A GTK based on screen display for keyboard shortcuts like caps-lock and volume
 
-# --------------------------------------------------- // TonylandDE Custom Apps
-beekeeper-studio-bin                                    # SQL editor and database manager
-bitwarden                                               # password manager
-blender                                                 # 3D creation suite
-feishin-bin                                             # music player for subsonic-compatible servers
-google-chrome                                           # google chrome browser
-obs-studio                                              # video recording and live streaming
-pixieditor-bin                                          # pixel art editor
-wezterm                                                 # GPU-accelerated terminal emulator
-kdenlive                                                # video editor
-qbittorrent                                             # bittorrent client
-heroic-games-launcher-bin                               # epic games amazon and gog launcher
-kdeconnect                                              # integrate your devices
-teams-for-linux-bin                                     # chats for enterprises works
-
