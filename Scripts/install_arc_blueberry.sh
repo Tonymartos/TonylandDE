@@ -10,7 +10,7 @@ source "${scrDir}/global_fn.sh"
 THEME_NAME="Arc Blueberry"
 THEME_ARCHIVE="${scrDir}/../Source/arcs/Theme_Arc-Blueberry.tar.gz"
 confDir="${XDG_CONFIG_HOME:-$HOME/.config}"
-THEME_DIR="${confDir}/tonylandde/themes/${THEME_NAME}"
+THEME_DIR="${confDir}/hyde/themes/${THEME_NAME}"
 
 print_log -g "[THEME] " -b "Installing :: " "${THEME_NAME}"
 
