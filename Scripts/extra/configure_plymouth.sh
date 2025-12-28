@@ -7,22 +7,36 @@
 scrDir=$(dirname "$(realpath "$0")")
 source "${scrDir}/../global_fn.sh"
 
+THEME_NAME="black_hud"
+THEME_SOURCE="${scrDir}/../../Source/plymouth/${THEME_NAME}"
+THEME_DEST="/usr/share/plymouth/themes/${THEME_NAME}"
+
 print_log -g "[PLYMOUTH] " -b "Configuring :: " "Plymouth Boot Splash"
 
 # Check if plymouth is installed
 if ! pkg_installed plymouth; then
-    print_log -r "[PLYMOUTH] " -err "not installed" "Install plymouth first: yay -S plymouth plymouth-theme-hud-git"
+    print_log -r "[PLYMOUTH] " -err "not installed" "Install plymouth first: sudo pacman -S plymouth"
     exit 1
 fi
 
-# Set HUD theme as default
-if plymouth-set-default-theme -l | grep -q "hud"; then
-    print_log -g "[PLYMOUTH] " -b "Setting theme :: " "HUD"
-    sudo plymouth-set-default-theme -R hud
-    print_log -g "[PLYMOUTH] " -stat "applied" "HUD theme"
+# Install black_hud theme from repository
+if [ -d "${THEME_SOURCE}" ]; then
+    print_log -g "[PLYMOUTH] " -b "Installing :: " "${THEME_NAME} theme"
+    sudo mkdir -p "${THEME_DEST}"
+    sudo cp -r "${THEME_SOURCE}"/* "${THEME_DEST}/"
+    print_log -g "[PLYMOUTH] " -stat "installed" "${THEME_NAME} to ${THEME_DEST}"
 else
-    print_log -y "[PLYMOUTH] " -wrn "theme not found" "HUD theme not installed. Install: yay -S plymouth-theme-hud-git"
-    # List available themes
+    print_log -r "[PLYMOUTH] " -err "not found" "Theme source: ${THEME_SOURCE}"
+    exit 1
+fi
+
+# Set black_hud theme as default
+if plymouth-set-default-theme -l | grep -q "${THEME_NAME}"; then
+    print_log -g "[PLYMOUTH] " -b "Setting theme :: " "${THEME_NAME}"
+    sudo plymouth-set-default-theme -R "${THEME_NAME}"
+    print_log -g "[PLYMOUTH] " -stat "applied" "${THEME_NAME} theme"
+else
+    print_log -y "[PLYMOUTH] " -wrn "theme not found" "${THEME_NAME} theme not available"
     print_log -g "[PLYMOUTH] " -b "Available themes:"
     plymouth-set-default-theme -l
     exit 1
