@@ -2,7 +2,6 @@
 
 <img src="Source/assets/tonylandde_logo.svg" alt="TonylandDE Logo" width="400"/>
 
-<h1>🌟 TonylandDE 🌟</h1>
 <h3>Hyprland Desktop Environment - Personalized Edition</h3>
 
 [![Hyprland](https://img.shields.io/badge/Hyprland-Dynamic-A78BFA?style=for-the-badge&logo=wayland&logoColor=white)](https://hyprland.org)
