@@ -9,15 +9,12 @@
 [![License](https://img.shields.io/badge/License-GPL--3.0-8eb0e6?style=for-the-badge)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/Tonymartos/TonylandDE?style=for-the-badge&color=69c3ff)](https://github.com/Tonymartos/TonylandDE/stargazers)
 
-<br>
+</div>
 
 >[!NOTE]
 > 🎨 TonylandDE is my customized configuration template based on [HyDE (Hyprland Desktop Environment)](https://github.com/HyDE-Project/HyDE).
 > 📖 I recommend visiting the original HyDE repository first to understand the base system before using this template.
 
-<br>
-
-</div>
 
 <a id="installation"></a>
 <div align="center">
