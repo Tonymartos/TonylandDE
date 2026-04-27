@@ -11,7 +11,7 @@
 
 <br>
 
-> [!NOTE]
+[!NOTE]
 > 🎨 TonylandDE is my customized configuration template based on [HyDE (Hyprland Desktop Environment)](https://github.com/HyDE-Project/HyDE).
 >
 > 📖 I recommend visiting the original HyDE repository first to understand the base system before using this template.
